@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elavarasi Ravichandran — Atmospheric Scientist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -346,6 +341,58 @@
   }
 
   /* Instrument gallery */
+  .instrument-photo.drawn {
+    border-style: solid;
+    border-color: var(--line);
+    background: var(--sky-pale);
+    padding: 0.35rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+  }
+  .instrument-photo.drawn svg {
+    width: 100%; height: 100%; display: block; color: var(--storm-blue);
+  }
+  .lab-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.1rem;
+    margin-top: 1.2rem;
+  }
+  .lab-shot {
+    background: var(--cloud-white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .lab-shot img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: var(--sky-pale-2);
+  }
+  .lab-shot figcaption {
+    padding: 0.85rem 1rem 1rem;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .talk-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .talk-list li { display: grid; grid-template-columns: 4.2rem 1fr; gap: 0.9rem; align-items: start; }
+  .talk-list .yr { font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; color: var(--sunset-coral); padding-top: 0.15rem; }
+  .talk-list .t { font-weight: 500; display: block; }
+  .talk-list .v { font-size: 0.85rem; color: var(--ink-soft); display: block; margin-top: 0.15rem; }
+  @media (max-width: 30rem) {
+    .talk-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .lab-shot img { height: 200px; }
+  }
+  .award-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.9rem; }
+  .award-list li { display: grid; grid-template-columns: 4rem 1fr; gap: 0.9rem; align-items: baseline; }
+  .award-list .yr { font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; color: var(--sunset-coral); }
   .instrument-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -481,8 +528,7 @@
     outline-offset: 3px;
   }
 </style>
-</head>
-<body>
+
 
 <section class="hero">
   <div class="drifting-cloud" style="top:12%; left:0; font-size:2.4rem; animation-duration: 38s;">☁️</div>
@@ -492,10 +538,10 @@
   <div class="hero-content">
     <p class="eyebrow">Atmospheric Aerosol &amp; Cloud Microphysics</p>
     <h1>Elavarasi Ravichandran</h1>
-    <p class="tagline">I study whether a particle activates into a cloud droplet or not — PhD candidate researching cloud condensation nuclei (CCN) activity and aerosol-cloud interactions.</p>
+    <p class="tagline">I study whether a particle activates into a cloud droplet or not — cloud condensation nuclei (CCN) activity and aerosol-cloud interactions.</p>
 
     <div class="badge-row">
-      <span class="badge">PhD Candidate, UC Riverside</span>
+      <span class="badge">PhD, UC Riverside · 2026</span>
     </div>
 
     <div class="ccn-stage" aria-hidden="true">
@@ -517,7 +563,7 @@
     </div>
 
     <div class="cta-row">
-      <a class="btn btn-primary" href="mailto:eravi002@ucr.edu">Say hello</a>
+      <a class="btn btn-primary" href="mailto:elavarasiravichandran03@gmail.com">Say hello</a>
       <a class="btn btn-secondary" href="#research">See the research</a>
     </div>
   </div>
@@ -541,9 +587,27 @@
     <div class="tl-item">
       <div class="tl-dot"></div>
       <div class="tl-card">
+        <p class="venue">2018 · SRM Institute of Science and Technology</p>
+        <h3>Where it actually began</h3>
+        <p>B.Sc. Physics. My thesis looked at the characteristics of PM<sub>10</sub> over sub-urban Chennai — the first time I stared at a size distribution long enough for it to mean something.</p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
         <p class="venue">ISRO VSSC · Trivandrum</p>
         <h3>The golden-opportunity month</h3>
         <p>Landed an internship at the Space Physics Laboratory — the kind of opportunity everyone in this field dreams about. Staying at the security guest house, working at VSSC — that one month was genuinely surreal.</p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <p class="venue">2020 · SRM Institute of Science and Technology</p>
+        <h3>Master's, still aerosols</h3>
+        <p>M.Sc. Physics. This time I went backwards: back trajectory analysis of aerosols over a semi-urban coastal environment in Chennai, asking where the air had been before it reached us. Both Chennai projects were supervised by T. V. Lakshmi Kumar.</p>
       </div>
     </div>
 
@@ -570,7 +634,7 @@
       <div class="tl-card">
         <p class="venue">EPCAPE</p>
         <h3>The dream campaign, for real this time</h3>
-        <p>Got to join <a href="https://mdp-aerosol-group.github.io/epcapeDAQ/" target="_blank" rel="noopener">EPCAPE</a> — as a cloud-and-aerosols girl, honestly, what more could I ask for?</p>
+        <p>Got to work on <a href="https://mdp-aerosol-group.github.io/epcapeDAQ/" target="_blank" rel="noopener">EPCAPE</a> — as a cloud-and-aerosols girl, honestly, what more could I ask for? Both of my first-author papers come out of that dataset.</p>
       </div>
     </div>
 
@@ -631,7 +695,7 @@
           <p class="comic-caption">It depends on conditions — which is exactly why it took a whole paper to explain. 🎭</p>
         </div>
         <p class="venue" style="margin-top:0.8rem;">Science Advances · 2026</p>
-        <p style="margin-top:0.6rem; font-size:0.88rem; color:var(--ink-soft);">Also covered in <a href="https://news.ucr.edu/articles/2026/02/09/trace-gases-play-unseen-role-cloud-droplet-formation" target="_blank" rel="noopener">UCR News</a> and as an <a href="https://www.arm.gov/news/features/post/108441" target="_blank" rel="noopener">ARM.gov feature</a>.</p>
+        <p style="margin-top:0.6rem; font-size:0.88rem; color:var(--ink-soft);"><a href="https://www.science.org/doi/10.1126/sciadv.adx0960" target="_blank" rel="noopener">Read the paper</a> · highlighted by the <a href="https://science.osti.gov/ber/Highlights/2026/10b" target="_blank" rel="noopener">DOE Office of Science</a>, and covered in <a href="https://news.ucr.edu/articles/2026/02/09/trace-gases-play-unseen-role-cloud-droplet-formation" target="_blank" rel="noopener">UCR News</a> and an <a href="https://www.arm.gov/news/features/post/108441" target="_blank" rel="noopener">ARM.gov feature</a>.</p>
       </div>
     </div>
 
@@ -648,7 +712,7 @@
 
   <div class="fact-strip">
     <div class="fact"><div class="num">2016</div><div class="label">doing aerosol research since</div></div>
-    <div class="fact"><div class="num">3</div><div class="label">field instruments mastered</div></div>
+    <div class="fact"><div class="num">6</div><div class="label">instruments in my toolkit</div></div>
     <div class="fact"><div class="num">1<sup>st</sup></div><div class="label">author, Science Advances</div></div>
   </div>
 </section>
@@ -662,7 +726,7 @@
     <div class="pub">
       <div class="drop">💧</div>
       <div>
-        <h3>Removal of trace gases can both increase and decrease cloud droplet formation</h3>
+        <h3><a href="https://www.science.org/doi/10.1126/sciadv.adx0960" target="_blank" rel="noopener">Removal of trace gases can both increase and decrease cloud droplet formation</a></h3>
         <p>First-author work quantifying how removing certain trace gases pushes cloud droplet formation in opposite directions depending on conditions — based on EPCAPE field data.</p>
         <p class="venue">Science Advances · 2026</p>
       </div>
@@ -672,7 +736,7 @@
       <div>
         <h3>Aqueous Phase Aerosol Production Rates in Eastern Pacific Stratocumulus Clouds</h3>
         <p>In-progress first-author manuscript examining how cloud processing leaves a chemical signature on black carbon and aerosol production.</p>
-        <p class="venue">Manuscript in preparation</p>
+        <p class="venue">In revision · first author</p>
       </div>
     </div>
     <div class="pub">
@@ -686,11 +750,48 @@
     <div class="pub">
       <div class="drop">🌆</div>
       <div>
-        <h3>Seasonal variations in characteristics, sources and diurnal patterns of carbonaceous and water-soluble constituents in urban aerosols from the east coast</h3>
+        <h3><a href="https://publish.csiro.au/EN/EN21017" target="_blank" rel="noopener">Seasonal variations in characteristics, sources and diurnal patterns of carbonaceous and water-soluble constituents in urban aerosols from the east coast</a></h3>
         <p>Co-authored work from my master's, examining seasonal and daily patterns in carbon-based and water-soluble aerosol components along the east coast of India.</p>
         <p class="venue">Environmental Chemistry · 2021</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="section-head">
+    <p class="eyebrow">Talks</p>
+    <h2>Conference presentations</h2>
+  </div>
+  <div class="card">
+    <ul class="talk-list">
+      <li><span class="yr">2026</span><span>
+        <span class="t">CCN activation properties of aerosol and cloud droplet residuals before, during and after stratocumulus passage</span>
+        <span class="v">American Meteorological Society Annual Meeting &middot; Houston, TX</span>
+      </span></li>
+      <li><span class="yr">2024</span><span>
+        <span class="t">Influence of gas phase compounds on CCN activity observed during EPCAPE</span>
+        <span class="v">AGU Fall Meeting &middot; Washington, D.C.</span>
+      </span></li>
+      <li><span class="yr">2023</span><span>
+        <span class="t">Size-resolved CCN activity of cloud droplet residuals during EPCAPE</span>
+        <span class="v">AGU Fall Meeting &middot; San Francisco, CA</span>
+      </span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="section-head">
+    <p class="eyebrow">Recognition</p>
+    <h2>Awards &amp; fellowships</h2>
+  </div>
+  <div class="card">
+    <ul class="award-list">
+      <li><span class="yr">2026</span><span><a href="https://www.cert.ucr.edu/news/2026/11/09/ce-cert-announces-2026-2027-scholarship-recipients" target="_blank" rel="noopener">Esther F. Hays Graduate Fellowship</a> &middot; CE-CERT, UC Riverside</span></li>
+      <li><span class="yr">2024</span><span>AGU Student Travel Grant</span></li>
+      <li><span class="yr">2023</span><span>Dean&rsquo;s Distinguished Fellowship, UC Riverside</span></li>
+    </ul>
   </div>
 </section>
 
@@ -705,26 +806,32 @@
     <p style="color:var(--ink-soft); font-size:0.9rem; margin-top:-0.4rem; margin-bottom:1rem;">Side hustle: getting hands-on with instruments in the lab alongside colleagues — genuinely one of the fun parts of this job.</p>
     <div class="instrument-gallery">
       <div class="instrument-card">
+        <div class="instrument-photo drawn"><svg viewBox="0 0 200 90" role="img" aria-label="A column sorting particles by size into three separate outputs."><rect x="72" y="10" width="34" height="70" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="89" y1="12" x2="89" y2="78" stroke="currentColor" stroke-width="1.2" opacity="0.35" stroke-dasharray="3 3"/><g fill="currentColor"><circle cx="58" cy="24" r="2.4"/><circle cx="50" cy="38" r="3.4"/><circle cx="56" cy="52" r="1.8"/><circle cx="48" cy="64" r="4"/></g><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="106" y1="26" x2="142" y2="26"/><line x1="106" y1="45" x2="142" y2="45"/><line x1="106" y1="64" x2="142" y2="64"/></g><circle cx="150" cy="26" r="2.2" fill="#FF7A59"/><circle cx="150" cy="45" r="3.4" fill="#FF7A59"/><circle cx="150" cy="64" r="4.6" fill="#FF7A59"/></svg></div>
         <h4>SMPS</h4>
         <p>Sizes up aerosol particles by diameter — the bread and butter of aerosol counting.</p>
       </div>
       <div class="instrument-card">
+        <div class="instrument-photo drawn"><svg viewBox="0 0 200 90" role="img" aria-label="A laser beam crossing a chamber with a single particle glowing at the centre."><rect x="58" y="30" width="84" height="30" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="22" y1="45" x2="178" y2="45" stroke="currentColor" stroke-width="2"/><rect x="12" y="38" width="12" height="14" rx="2" fill="currentColor"/><circle cx="100" cy="45" r="11" fill="#F4B942" opacity="0.3"/><circle cx="100" cy="45" r="4.5" fill="#FF7A59"/><g stroke="#FF7A59" stroke-width="1.8" stroke-linecap="round"><line x1="100" y1="27" x2="100" y2="21"/><line x1="100" y1="63" x2="100" y2="69"/><line x1="87" y1="32" x2="83" y2="28"/><line x1="113" y1="58" x2="117" y2="62"/></g></svg></div>
         <h4>SP2</h4>
         <p>Single-particle soot photometer — finds black carbon particle by particle.</p>
       </div>
       <div class="instrument-card">
+        <div class="instrument-photo drawn"><svg viewBox="0 0 200 90" role="img" aria-label="A vertical column in which droplets grow larger toward the bottom."><rect x="76" y="6" width="48" height="78" rx="6" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="76" y1="28" x2="124" y2="28" stroke="currentColor" stroke-width="1.2" opacity="0.35"/><line x1="76" y1="52" x2="124" y2="52" stroke="currentColor" stroke-width="1.2" opacity="0.35"/><circle cx="92" cy="17" r="2.2" fill="currentColor"/><circle cx="110" cy="19" r="2.2" fill="currentColor"/><circle cx="97" cy="40" r="4.4" fill="currentColor" opacity="0.65"/><circle cx="112" cy="44" r="3.6" fill="currentColor" opacity="0.65"/><circle cx="94" cy="68" r="7.5" fill="#35618C"/><circle cx="113" cy="71" r="6" fill="#35618C"/><text x="134" y="24" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.65">0.2%</text></svg></div>
         <h4>CCNC</h4>
         <p>Cloud condensation nuclei counter — my main instrument, tells us which particles actually become droplets.</p>
       </div>
       <div class="instrument-card">
+        <div class="instrument-photo drawn"><svg viewBox="0 0 200 90" role="img" aria-label="A dry particle passing through a humidifier and emerging swollen."><rect x="16" y="26" width="28" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="80" y="30" width="34" height="32" rx="7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4 3"/><rect x="150" y="26" width="28" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="62" cy="46" r="3.2" fill="currentColor"/><circle cx="132" cy="46" r="8" fill="#35618C" opacity="0.85"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5" fill="none"><path d="M91 38 q 4 -5 8 0"/><path d="M91 48 q 4 -5 8 0"/><path d="M91 58 q 4 -5 8 0"/></g><text x="82" y="80" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.65">90% RH</text></svg></div>
         <h4>HTDMA</h4>
         <p>Watches particles swell as humidity rises — hygroscopic growth, up close.</p>
       </div>
       <div class="instrument-card">
+        <div class="instrument-photo drawn"><svg viewBox="0 0 200 90" role="img" aria-label="A small optical counter hanging beneath a weather balloon."><path d="M100 5 C 119 5, 130 20, 123 33 C 119 41, 110 43, 100 43 C 90 43, 81 41, 77 33 C 70 20, 81 5, 100 5 Z" fill="none" stroke="currentColor" stroke-width="2.4"/><line x1="100" y1="43" x2="100" y2="55" stroke="currentColor" stroke-width="1.5"/><rect x="81" y="55" width="38" height="27" rx="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="104" cy="68" r="4" fill="#FF7A59"/><line x1="88" y1="68" x2="99" y2="68" stroke="#FF7A59" stroke-width="1.8" stroke-linecap="round"/><g stroke="currentColor" stroke-width="1.3" opacity="0.35" stroke-linecap="round"><line x1="146" y1="20" x2="168" y2="20"/><line x1="152" y1="32" x2="174" y2="32"/><line x1="26" y1="48" x2="48" y2="48"/></g></svg></div>
         <h4>POPS</h4>
         <p>Compact optical particle counter — small enough to take almost anywhere in the field.</p>
       </div>
       <div class="instrument-card">
+        <div class="instrument-photo drawn"><svg viewBox="0 0 200 90" role="img" aria-label="A filter punch inside an oven beside a rising stepped temperature ramp."><rect x="24" y="22" width="80" height="46" rx="6" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="64" cy="45" r="13" fill="currentColor" opacity="0.16"/><circle cx="64" cy="45" r="13" fill="none" stroke="currentColor" stroke-width="1.8"/><g stroke="#FF7A59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M120 68 L 134 68 L 134 54 L 150 54 L 150 38 L 166 38 L 166 22"/></g><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.45"><line x1="40" y1="74" x2="40" y2="80"/><line x1="56" y1="74" x2="56" y2="80"/><line x1="72" y1="74" x2="72" y2="80"/><line x1="88" y1="74" x2="88" y2="80"/></g></svg></div>
         <h4>OC/EC Analyser</h4>
         <p>Splits carbon in aerosol samples into organic vs. elemental — the "what's it made of" instrument.</p>
       </div>
@@ -735,6 +842,10 @@
     <h3>Computing</h3>
     <div class="chip-cloud">
       <span class="chip">Julia</span>
+      <span class="chip">Python</span>
+      <span class="chip">R</span>
+      <span class="chip">Igor Pro</span>
+      <span class="chip">Linux</span>
       <span class="chip">C / C++</span>
       <span class="chip">Data analysis &amp; visualization</span>
       <span class="chip">Statistical modeling</span>
@@ -742,19 +853,82 @@
   </div>
 </section>
 
+<section id="lab">
+  <div class="section-head">
+    <p class="eyebrow">Life in the lab</p>
+    <h2>What the work actually looks like</h2>
+  </div>
+  <div class="lab-gallery">
+      <figure class="lab-shot">
+        <img src="img/rccn-screening.jpg" alt="Ela at her desk with an aerosol activation curve on the screen behind her" loading="lazy" width="1400" height="1400">
+        <figcaption>Screening the rCCN/CN record, one bad point at a time. The smile is load-bearing.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/building-the-rack.jpg" alt="Ela in front of a partly built instrument rack with a colleague behind it" loading="lazy" width="1400" height="1400">
+        <figcaption>Rack build number I have lost count of. Still the best part of the job.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/first-sample-prep.jpg" alt="A lab bench with a syringe pump and an electrospray aerosol generator, a gloved hand holding a syringe" loading="lazy" width="1400" height="1400">
+        <figcaption>First sample I ever prepared for the aerosol generator. Very careful, very slow.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/moving-instruments.jpg" alt="An instrument rack being lifted into a first floor doorway on a forklift" loading="lazy" width="1400" height="1400">
+        <figcaption>Instruments do not move themselves. Heat, weight, forklift, whatever it takes.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/smog-chamber.jpg" alt="Ela looking up at a laptop showing a size distribution, beneath the smog chamber bag" loading="lazy" width="1400" height="1400">
+        <figcaption>Another size distribution, another long stare. Smog chamber, UC Riverside.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/mobile-measurement.jpg" alt="Ela at a laptop in the open back of a measurement van full of instruments" loading="lazy" width="1400" height="1400">
+        <figcaption>Mobile measurement day. Making sure the code runs before the van does.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/small-aerosol-package.jpg" alt="A small black instrument rack outside, with the CE-CERT mobile environmental laboratory behind it" loading="lazy" width="1400" height="1400">
+        <figcaption>A small package carrying sensors for both particle size and gases. My advisor built it and I took it everywhere. This time it was out because a colleague was burning pine cones in his fire pit. Ask us if you want to know how to build one.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/sp2-laser-alignment.jpg" alt="Three people in laser safety glasses working on an optical bench" loading="lazy" width="1400" height="1400">
+        <figcaption>Laser alignment on the SP2. The one day a year we all look cool.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/uhsas-unboxing.jpg" alt="Three lab members laughing while cutting open a wrapped instrument crate" loading="lazy" width="1400" height="1400">
+        <figcaption>The UHSAS arrived. Scissors out, nobody pretending to be calm.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/live-data-watch.jpg" alt="Four lab members leaning in together to look at a screen" loading="lazy" width="1400" height="1400">
+        <figcaption>Four people, one screen, waiting to see whether the live data does anything interesting.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/lab-celebration.jpg" alt="Five lab members in paper party hats taking a group selfie" loading="lazy" width="1400" height="1400">
+        <figcaption>We celebrate everything. Lunch runs long because we talk too much, and so do the breaks.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/its-dr-actually.jpg" alt="Ela laughing in her cubicle under a gold banner reading IT&rsquo;S DR ACTUALLY" loading="lazy" width="1400" height="1400">
+        <figcaption>The banner says IT&rsquo;S DR ACTUALLY. Three years in that cubicle and I had never once laughed like that in it.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/defence-day.jpg" alt="Ela and her advisor Markus Petters smiling at a desk with electronics on it" loading="lazy" width="1400" height="1400">
+        <figcaption>Defence day, with the person who got me there.</figcaption>
+      </figure>
+      <figure class="lab-shot">
+        <img src="img/i-made-it.jpg" alt="Ela in blue doctoral regalia and a flower lei, arms out, smiling" loading="lazy" width="1400" height="1400">
+        <figcaption>Blue robe, flowers, done. Dr Ela.</figcaption>
+      </figure>
+  </div>
+</section>
+
 <section id="contact">
   <div class="status-card">
     <p class="eyebrow" style="color:#F4B942;">Currently</p>
-    <h2>Finishing my PhD, looking for what's next</h2>
-    <p>Graduating September 2026 — open to roles in atmospheric science, air quality, weather modification, and applied climate research.</p>
-    <a class="btn btn-primary" href="mailto:eravi002@ucr.edu">eravi002@ucr.edu</a>
+    <h2>PhD done. Looking for what's next.</h2>
+    <p>Defended September 2026 — open to roles in atmospheric science, air quality, cloud physics, instrumentation, weather modification, and applied climate research.</p>
+    <a class="btn btn-primary" href="mailto:elavarasiravichandran03@gmail.com">elavarasiravichandran03@gmail.com</a>
   </div>
 </section>
 
 <footer>
   <div class="cloud-sign">🔹 → ☁️</div>
-  <p>Elavarasi Ravichandran · Riverside, CA</p>
+  <p>Elavarasi Ravichandran, PhD · Atmospheric aerosols &amp; cloud microphysics</p>
 </footer>
 
-</body>
-</html>
